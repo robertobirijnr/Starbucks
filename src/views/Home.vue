@@ -1,5 +1,6 @@
 <template>
   <section>
+    <div class="circle"></div>
     <header>
       <a href="#" ><img src="../assets/logo.png" class="logo" alt=""></a>
       <ul>
@@ -19,6 +20,16 @@
         <img src="../assets/img1.png" class="starbucks" alt="">
       </div>
     </div>
+    <ul class="thumb">
+      <li><img src="../assets/thumb1.png" ></li>
+      <li><img src="../assets/thumb2.png" ></li>
+      <li><img src="../assets/thumb3.png" ></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="../assets/facebook.png" alt=""></a></li>
+      <li><a href="#"><img src="../assets/twitter.png" alt=""></a></li>
+      <li><a href="#"><img src="../assets/instagram.png" alt=""></a></li>
+    </ul>
   </section>
 </template>
 
@@ -122,7 +133,62 @@ header ul li a{
 .content .imgBox{
   width: 600px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.content.imgBox img{
+  max-width: 340px;
+}
+.thumb{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.thumb li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.thumb li img{
+  max-width: 60px;
+} 
+
+.thumb li:hover{
+  transform: translateY(-15px);
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+
+.sci li a{
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+}
+.circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
 }
 
 </style>
